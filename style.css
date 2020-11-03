@@ -10,8 +10,8 @@ header{
     height: 100px;
     background-color: #032a85;
 }
-header #logo{
-    width: 200px;
+header .logo{
+    width: 150px;
 }
 nav{
     margin-top: 40px;
@@ -19,6 +19,8 @@ nav{
 a{
     text-decoration: none;
     text-transform: uppercase;
+}
+nav a{
     padding: 10px 20px 10px 20px;
     color: white;
     font-size: 16px;
@@ -41,10 +43,15 @@ nav a:hover{
     display: flex;
     flex-direction: column;
     width: 30%;
-    margin-top: 15px;
+    margin-top: 90px;
+}
+#navside .active{
+    background-color:orangered;
+    color: white;
+    border-bottom: none;
 }
 #navside a{
-    border-bottom: #032a85 solid 1px;
+    border-bottom: cornflowerblue solid 1px;
     padding: 20px;
     color: #032a85;
     font-size: 14px;
@@ -59,6 +66,7 @@ nav a:hover{
 }
 video {
     width: 100%;
+    margin-top: 55px;
 }
 #txt{
     position: absolute;
@@ -82,7 +90,6 @@ video {
     bottom: 5px;
     font-weight: bold;
     font-size: 14px;
-
 }
 #txt a:hover{
     background-color: white;
@@ -98,23 +105,26 @@ video {
     color: #032a85;
 }
 .card{
-    max-width: 250px;
+    max-width: 200px;
     height: 350px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
     text-align: center;
     margin-bottom: 50px;
     margin-top: 50px;
     font-size: 12px;
-
+    padding: 10px;
+}
+.card img{
+    width: 100%;
 }
 .card:hover{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 20px 20px 0 rgba(0, 0, 0, 0.6);
 }
 .card p{
-    font-size: 25px;
+    font-size: 20px;
 }
 footer{
-    height: 350px;
+    height: 250px;
     background-color: #032a85;
     display: flex;
     flex-direction: row;
@@ -124,37 +134,55 @@ footer{
     text-transform: capitalize;
     margin-top: 100px;
 }
-footer .box{
+footer .box1, footer .box2{
     text-align: center;
-}
-footer p{
-    margin-top: 50px;
-    font-size: 20px;
+    width: 50%;
 }
 footer img{
     width:50px;
+    padding: 10px;
 }
 .contac-info{
     display: flex;
     flex-direction: row;
     padding: 10px;
-    margin-top: 50px;
+    margin-left: 30%;
 }
-footer .btn{
-    padding: 15px;
+footer .copyright{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+}
+footer .copyright p{
+    margin-top: 40px;
     font-size: 20px;
-    border-radius: 10px;
-    margin-top: 200px;
 }
-footer .links{
+footer .logo{
+    width: 100px;
+}
+footer .box2{
     display: flex;
     flex-direction: column;
 }
-footer .links a{
-    border-bottom: white 1px solid;
+footer  .links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: left;
 }
-footer .links a:hover{
-    background-color: white;
-    color:#032a85;
+.links a{
+    display: flex;
+    flex-direction: column;
+    text-transform: capitalize;
+    color: white;
+    padding: 10px 5px 10px 5px;
 }
+.links a:hover {
+    font-weight: bold;
+    color: orangered;
+    text-decoration-line: underline;
+
+
+}
+
 
