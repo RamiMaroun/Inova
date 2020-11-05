@@ -18,7 +18,7 @@ header .logo{
     display: none;
     top: 30px;
     right: 50px;
-    width: 102px;
+    width: 75px;
 }
 .dropdown .drop-content {
     display: none;
@@ -99,7 +99,7 @@ nav a:hover{
 }
 .dropside:hover .drop-content {
     display: block;
-    width: 350px;
+    width: 150px;
 }
 .dropside:hover .dropbtn {
     background-color: #032a85;
@@ -202,7 +202,7 @@ video {
     font-size: 20px;
 }
 footer{
-    height: 275px;
+    height: 250px;
     background-color: #032a85;
     display: flex;
     flex-direction: row;
@@ -211,6 +211,7 @@ footer{
     color: white;
     text-transform: capitalize;
     margin-top: 100px;
+    overflow: hidden;
 }
 footer .box1, footer .box2 ,footer .box3{
     text-align: center;
@@ -442,7 +443,7 @@ nav{
         width: 86vw;
     }
     .dropside:hover .drop-content {
-        width: 250px;
+        width: 150px;
     }
     footer img{
         width: 30px;
@@ -517,11 +518,22 @@ nav{
     video{
         width: 85vw;
     }
+    footer .box1 h3{
+        margin-left:100px;
+    }
+    .contac-info{
+        margin-left:75px;
+    }
+    .copyright img{
+        margin-left: 50px;
+    }
 }
 @media(max-width: 334px) {
-    footer .box1 h3{
-        margin-left: 40px;
-        font-size: 16px;
+#show{
+    height: 400px;
+}
+    .video-backgound a{
+       bottom: 100px;
     }
     footer img{
        width: 30px;
@@ -567,12 +579,32 @@ nav{
 }
     .video-backgound a{
         left: -75px;
+        border: #032a85 1px solid;
+        color: #032a85;
+        bottom: 5px;
+        padding: 10px;
     }
     .dropside:hover .drop-content {
         width: 200px;
     }
     footer img{
-        width:  20px;
+        width:  25px;
+    }
+}
+@media(max-width: 288px) {
+    footer .box1 h3{
+        margin-left:75px;
+    }
+    .contac-info{
+        margin-left:50px;
+    }
+    .copyright img{
+        margin-left: 25px;
+    }
+}
+@media(max-width: 277px) {
+    .copyright img{
+        margin-left: 25px;
     }
 }
 @media (max-width: 255px) {
@@ -583,21 +615,41 @@ nav{
         margin-left: 15px ;
     }
     .video-backgound a{
-        padding: 10px;
-        left: -75px;
+        left: -100px;
     }
     .drop-content a {
         font-size: 12px;
     }
+    footer .box1 h3{
+        margin-left:65px;
+    }
+    .contac-info{
+        margin-left:50px;
+    }
+    .copyright img{
+        margin-left: 10px;
+    }
+}
+@media (max-width: 237px) {
+footer{
+    position: fixed;
+}
 }
 @media (max-width: 229px) {
     .video-backgound a{
-        left: -100px;
     }
     .card{
         width: 130px;
     }
-
+    footer .box1 h3{
+        margin-left:50px;
+    }
+    .contac-info{
+        margin-left:25px;
+    }
+    .copyright img{
+        margin-left: 0;
+    }
 }
 @media (max-width: 207px) {
     .card{
@@ -616,6 +668,12 @@ nav{
         font-size: 14px;
         margin-top: 35px;
     }
+    footer .box1 h3{
+        margin-left:25px;
+    }
+    .contac-info{
+        margin-left:10px;
+    }
 }
 @media (max-width: 200px) {
     #txt h3, #txt h2{
@@ -632,12 +690,43 @@ nav{
     .dropside{
         left: 10px;
     }
+    .dropdown{
+        margin-left: -10px;
+    }
+    header .logo{
+        margin-left: 20px;
+    }
 }
 @media (max-width: 180px) {
     #txt h3, #txt h2{
-        width: 120px;
+        width: 110px;
     }
-
+    #txt h3{
+        top: 140px;
+    }
+    .products{
+        margin-left: 10px;
+    }
+    .card{
+        width: 85px;
+    }
+    video{
+        margin-top: 225px;
+    }
+}
+@media(max-width: 173px) {
+    footer .box1 h3{
+        font-size: 14px;
+    }
+    .contac-info{
+        margin-left:-2px;
+    }
+    .copyright img{
+        margin-left: -10px;
+    }
+    .video-backgound a{
+        left:-120px ;
+    }
 
 }
 
