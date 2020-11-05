@@ -13,6 +13,49 @@ header{
 header .logo{
     width: 150px;
 }
+.dropdown{
+    position: relative;
+    display: none;
+    top: 30px;
+    right: 50px;
+    width: 102px;
+}
+.dropdown .drop-content {
+    display: none;
+    position: absolute;
+    right: 10px;
+    background-color: white;
+    min-width: 75px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.drop-content a {
+    color: #032a85;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: #032a85 1px dotted;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+.drop-content a:hover {
+    background-color: #0ac89a;
+    color: #f9f9f9;
+}
+.dropdown:hover .drop-content {
+    display: block;
+}
+.dropdown:hover .dropbtn {
+    background-color: white;
+    color: #032a85;
+}
+.dropbtn{
+    font-size: 16px;
+    padding: 10px 20px 10px 20px;
+    background-color: #0ac89a;
+    cursor: pointer;
+    color: #f9f9f9;
+}
 nav{
     margin-top: 40px;
 }
@@ -38,7 +81,40 @@ nav a:hover{
 #show{
     display: flex;
     flex-direction: row;
+    overflow: hidden;
 }
+.dropside{
+    position: relative;
+    display: none;
+    top: 30px;
+    left: 25px;
+}
+.dropside .drop-content{
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropside:hover .drop-content {
+    display: block;
+    width: 350px;
+}
+.dropside:hover .dropbtn {
+    background-color: #032a85;
+    border: none;
+}
+ .dropside .dropbtn{
+    font-size: 12px;
+     width: 120px;
+    background-color: #0ac89a;
+    cursor: pointer;
+     text-transform: uppercase;
+     color: #f9f9f9;
+     border: #0ac89a solid 1px;
+     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ }
 #navside{
     display: flex;
     flex-direction: column;
@@ -46,7 +122,7 @@ nav a:hover{
     margin-top: 90px;
 }
 #navside .active{
-    background-color:orangered;
+    background-color:#0ac89a;
     color: white;
     border-bottom: none;
 }
@@ -71,35 +147,37 @@ video {
 #txt{
     position: absolute;
     color: white;
-    top: 40%;
+    top: 30%;
     left: 20px;
 }
 #txt h2{
     font-size: 30px;
 }
 #txt h3{
+    position: absolute;
+    top:100px;
     font-size: 20px;
 }
-#txt a{
+.video-backgound a{
     position: absolute;
     color: white;
     border: white 1px solid;
     border-radius: 10px;
-    padding: 20px 10px  20px 10px;
-    left: 525px;
-    bottom: 5px;
+    padding: 20px 5px  20px 5px;
+    left: 40%;
+    bottom: 20%;
     font-weight: bold;
     font-size: 14px;
+    text-align: center;
 }
-#txt a:hover{
+.video-backgound a:hover{
     background-color: white;
     color: #032a85;
 }
 .products{
-    padding: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-left: 90px;
 }
 .products a{
     color: #032a85;
@@ -124,7 +202,7 @@ video {
     font-size: 20px;
 }
 footer{
-    height: 250px;
+    height: 275px;
     background-color: #032a85;
     display: flex;
     flex-direction: row;
@@ -134,7 +212,7 @@ footer{
     text-transform: capitalize;
     margin-top: 100px;
 }
-footer .box1, footer .box2{
+footer .box1, footer .box2 ,footer .box3{
     text-align: center;
     width: 50%;
 }
@@ -146,7 +224,7 @@ footer img{
     display: flex;
     flex-direction: row;
     padding: 10px;
-    margin-left: 30%;
+    margin-left: 35%;
 }
 footer .copyright{
     display: flex;
@@ -154,7 +232,7 @@ footer .copyright{
     margin-left: 20px;
 }
 footer .copyright p{
-    margin-top: 40px;
+    margin-top: 50px;
     font-size: 20px;
 }
 footer .logo{
@@ -179,8 +257,386 @@ footer  .links{
 }
 .links a:hover {
     font-weight: bold;
-    color: orangered;
+    color: #0ac89a;
     text-decoration-line: underline;
+}
+footer .box3{
+    display: none;
+}
+.box3 button{
+    background-color: #0ac89a;
+    color: #f9f9f9;
+    padding: 15px;
+    font-size: 16px;
+}
+@media (max-width: 1179px) {
+    video {
+        margin-top: 75px;
+    }
+    #navside{
+        width: 30%;
+        margin-top: 50px;
+    }
+}
+@media(max-width: 1160px) {
+    .products{
+        grid-template-columns: repeat(3,1fr);
+    }
+    #txt{
+        top: 20%;
+    }
+}
+@media(max-width: 1005px) {
+    #txt {
+      top: 5%;
+        color: #032a85;
+    }
+    #txt h3{
+        top:100px;
+    }
+    video{
+        margin-top:200px;
+    }
+    .video-backgound a{
+        left: 35%;
+        bottom: 150px;
+    }
+}
+@media(max-width: 900px) {
+   .products{
+       grid-template-columns: repeat(2,1fr);
+   }
+    footer .box1 h3{
+        text-align: left;
+        margin-left: 75px;
+    }
+    .contac-info{
+        margin-left: 20px;
+    }
+}
+@media(max-width: 794px) {
+    #txt h3{
+        top:125px;
+    }
+    video{
+        margin-top:250px;
+    }
+    .video-backgound a{
+        left: 30%;
+    }
+    footer .box2{
+        display: none;
+    }
+    footer .box3{
+        display: inline;
+    }
+    .box3 button{
+        margin-top: 100px;
+    }
+    footer img{
+        width:40px;
+    }
+    footer .copyright p{
+        margin-top: 35px;
+    }
+    footer .logo{
+        width: 75px;
+    }
+}
+@media (max-width: 650px) {
+    .products{
+        grid-template-columns: repeat(1,1fr);
+        margin-left: 30%;
+    }
+    video{
+        margin-top: 275px;
+    }
+    .card{
+        height: 325px;
+    }
+}
+@media (max-width: 600px) {
+    .video-backgound a{
+       bottom: 50px;
+        color: #032a85;
+        border: #032a85 1px solid;
+        left: 20%;
+    }
+}
+@media (max-width: 550px) {
+nav{
+    display: none;
+}
+    #navside{
+        display: none;
+    }
+    .dropdown{
+        display: inline-block;
+    }
+    .dropside{
+        display: inline-block;
+    }
+    #txt{
+        width: 250px;
+        left: 50px;
+    }
+    #txt h2{
+        font-size: 20px;
+    }
+    #txt h3{
+        font-size: 15px;
+        top: 100px;
+        left: -100px;
+    }
+    .products{
+        margin-left: 25%;
+    }
+    video{
+        width: 143%;
+        margin-top: 200px;
+        margin-left: -120px;
+    }
+    .video-backgound a{
+        border: solid white 1px;
+        color: #f9f9f9;
+        left: 50px;
+        bottom: 100px;
+        font-size: 12px;
+    }
+}
+@media(max-width: 501px) {
+    .video-backgound a{
+        left: 50px;
+    }
+}
+@media (max-width: 480px) {
+    .video-backgound a{
+        left: 10px;
+    }
+}
+@media(max-width: 458px) {
+    .video-backgound a{
+        font-size: 10px;
+        bottom: 100px;
+    }
+    #txt{
+        width: 200px;
+    }
+    #txt h2{
+        font-size: 16px;
+        margin-top: 75px;
+        margin-left: -150px;
+    }
+    #txt h3{
+        font-size: 12px;
+        left: -150px;
+        top:125px;
+    }
+    #navside a{
+        font-size: 12px;
+    }
+   #navside a{
+       font-size: 10px;
+   }
+    video{
+        width: 86vw;
+    }
+    .dropside:hover .drop-content {
+        width: 250px;
+    }
+    footer img{
+        width: 30px;
+    }
+    footer .box1 h3{
+        margin-left: 50px;
+    }
+}
+@media (max-width: 408px) {
+    .products{
+        margin-left: 65px;
+    }
+    #txt{
+        width: 150px;
+    }
+    .video-backgound a{
+        bottom: 80px;
+        left: -25px;
+    }
+}
+@media(max-width: 386px) {
+    footer .box1 h3{
+        margin-left: 50px;
+    }
+    footer .resources{
+        width: 100px;
+        font-size: 14px;
+        padding: 10px;
+    }
+    .video-backgound a{
+        bottom: 50px;
+        left: -30px;
+    }
+}
+@media (max-width: 372px) {
+    #txt{
+        width: 100px;
+    }
+}
+@media (max-width: 355px) {
+  footer{
+      display: flex;
+      flex-direction: column;
+  }
+    footer .box1 , footer .box3{
+        width: 100%;
+    }
+    .box3 button{
+        margin-top: 0;
+        padding: 5px;
+    }
+    .products{
+        margin-left: 5%;
+    }
+    header{
+        flex-direction: column;
+    }
+    .dropdown{
+        top:-25px;
+        left: 35%;
+    }
+    header .logo{
+        margin-left: 30%;
+        width: 100px;
+    }
+    .dropbtn{
+        padding: 5px 15px 5px 15px;
+    }
+    .video-backgound a{
+        left: -50px;
+    }
+    video{
+        width: 85vw;
+    }
+}
+@media(max-width: 334px) {
+    footer .box1 h3{
+        margin-left: 40px;
+        font-size: 16px;
+    }
+    footer img{
+       width: 30px;
+    }
+    footer{
+       height:250px;
+    }
+    footer .resources{
+        margin-top: 0;
+        padding: 10px;
+    }
+    .contac-info, .copyright{
+        padding:0;
+    }
+    .card{
+        width: 150px;
+        height: 150px;
+    }
+    .card img{
+        width: 60%;
+    }
+    .card h2{
+        font-size: 12px;
+    }
+    .card p{
+        font-size: 12px;
+    }
+    .products{
+        margin-left: 30px;
+    }
+}
+@media(max-width: 318px) {
+    #txt h3{
+        font-size: 10px;
+    }
+    #txt h2{
+        font-size: 12px;
+    }
+}
+@media (max-width: 308px) {
+#txt h3, #txt h2{
+    width: 200px;
+}
+    .video-backgound a{
+        left: -75px;
+    }
+    .dropside:hover .drop-content {
+        width: 200px;
+    }
+    footer img{
+        width:  20px;
+    }
+}
+@media (max-width: 255px) {
+    #txt h3, #txt h2{
+        width: 150px;
+    }
+    .products{
+        margin-left: 15px ;
+    }
+    .video-backgound a{
+        padding: 10px;
+        left: -75px;
+    }
+    .drop-content a {
+        font-size: 12px;
+    }
+}
+@media (max-width: 229px) {
+    .video-backgound a{
+        left: -100px;
+    }
+    .card{
+        width: 130px;
+    }
+
+}
+@media (max-width: 207px) {
+    .card{
+        width: 120px;
+    }
+    video{
+        width: 82vw;
+    }
+    footer .copyright{
+        margin-left: 5px;
+    }
+    footer .logo{
+        width: 65px;
+    }
+    footer .copyright p{
+        font-size: 14px;
+        margin-top: 35px;
+    }
+}
+@media (max-width: 200px) {
+    #txt h3, #txt h2{
+        width: 125px;
+    }
+    .card{
+        width: 100px;
+    }
+    .video-backgound a{
+        left: -105px;
+        bottom: 25px;
+        padding: 4px;
+    }
+    .dropside{
+        left: 10px;
+    }
+}
+@media (max-width: 180px) {
+    #txt h3, #txt h2{
+        width: 120px;
+    }
 
 
 }
