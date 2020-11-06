@@ -2,6 +2,7 @@ body{
     padding: 0;
     margin: 0;
     font-family: sans-serif;
+    height: 100%;
 }
 header{
     display: flex;
@@ -80,6 +81,7 @@ nav a:hover{
 }
 .container{
     width: 90%;
+    min-height: calc(100vh - 100px - 270px);
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
     margin-left: 5%;
 }
@@ -142,18 +144,6 @@ nav a:hover{
     background-color: #0ac89a;
     color: white;
 }
-#txtShow-2{
-    display: none;
-    line-height: 2;
-    font-size: 18px;
-    box-shadow: 1px 8px 15px 0px rgba(0,0,0,0.6);
-    padding: 20px;
-    margin-top: 50px;
-    width: 86%;
-    margin-left: 12px;
-    margin-right: 5px;
-
-}
 .txtShow{
     width: 60%;
     line-height: 2;
@@ -162,29 +152,39 @@ nav a:hover{
     box-shadow: 1px 8px 15px 0px rgba(0,0,0,0.6);
     padding: 30px;
 }
-
-.persons{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    margin-left: 175px;
+iframe{
+    width:70vw ;
+    height:60vh;
+    margin-left: 140px;
+    margin-top: 75px;
 }
-.card{
-    max-width: 225px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
-    text-align: center;
-    margin-bottom: 50px;
+.contactus{
     margin-top: 50px;
-    font-size: 12px;
-
+    margin-bottom: 150px;
+    padding: 10px;
+}
+.contactus .txt-car{
+    width: 75%;
+    line-height: 2;
+    margin-left: 100px;
+}
+.cardinfo{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-left: 100px;
 }
 .card img{
     width: 100%;
 }
-.card:hover{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 20px 20px 0 rgba(0, 0, 0, 0.6);
+.card a{
+    text-transform: lowercase;
 }
-.card p{
-    font-size: 20px;
+.card{
+    width: 250px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+    margin-bottom: 150px;
+    text-align: center;
+    height: 300px;
 }
 footer{
     height: 250px;
@@ -198,7 +198,7 @@ footer{
     margin-top: 100px;
     overflow: hidden;
 }
-footer .box1, footer .box2 ,footer .box3{
+footer .box1, footer .box2{
     text-align: center;
     width: 50%;
 }
@@ -246,21 +246,17 @@ footer  .links{
     color: #0ac89a;
     text-decoration-line: underline;
 }
-footer .box3{
-    display: none;
-}
-.box3 button{
-    background-color: #0ac89a;
-    color: #f9f9f9;
-    padding: 15px;
-    font-size: 16px;
-}
 @media (max-width: 1105px) {
     #navside{
         height: 233px;
     }
-    .persons{
-        margin-left: 150px;
+    iframe{
+        margin-left: 120px;
+    }
+}
+@media (max-width: 1050px) {
+    .cardinfo{
+        grid-template-columns: repeat(2,1fr);
     }
 }
 @media(max-width: 900px) {
@@ -274,21 +270,11 @@ footer .box3{
     #navside{
         height: 250px;
     }
-    .persons{
-        margin-left: 75px;
-        margin-right: 50px;
+    iframe{
+        margin-left: 100px;
     }
 }
 @media(max-width: 794px) {
-    footer .box2{
-        display: none;
-    }
-    footer .box3{
-        display: inline;
-    }
-    .box3 button{
-        margin-top: 100px;
-    }
     footer img{
         width:40px;
     }
@@ -298,32 +284,26 @@ footer .box3{
     footer .logo{
         width: 75px;
     }
-    .persons{
-        margin-left: 100px;
-    }
-}
-@media(max-width: 713px) {
     #navside{
         display: none;
     }
     .dropside{
         display: inline-block;
     }
-    .persons{
-        margin-left: 50px;
-        margin-right: 30px;
+    .cardinfo{
+        grid-template-columns: repeat(1,1fr);
+        margin-left: 200px;
     }
 }
 @media (max-width: 625px) {
-    .persons{
-        grid-template-columns: repeat(1,1fr);
-        margin-left: 25%;
-    }
     #navside{
         width: 30%;
     }
-    .txtShow{
-        width: 70%;
+    iframe{
+        margin-left: 75px;
+    }
+    .cardinfo{
+        margin-left: 150px;
     }
 }
 @media (max-width: 550px) {
@@ -333,14 +313,8 @@ footer .box3{
     .dropdown{
         display: inline-block;
     }
-    .persons{
-        margin-left: 20%;
-    }
-    .txtShow{
-        display: none;
-    }
-    #txtShow-2{
-        display: flex;
+    .cardinfo{
+        margin-left: 100px;
     }
 }
 @media(max-width: 458px) {
@@ -359,13 +333,8 @@ footer .box3{
     footer .box1 h3{
         margin-left: 50px;
     }
-    .persons{
-        margin-left: 15%;
-    }
-    #txtShow-2{
-        width: 80%;
-        margin-left: 25px;
-        margin-right: 1px;
+    .cardinfo{
+        margin-left: 50px;
     }
 }
 @media(max-width: 386px) {
@@ -377,13 +346,8 @@ footer .box3{
         font-size: 14px;
         padding: 10px;
     }
-    .persons{
-        margin-left: 10%;
-    }
-    #txtShow-2{
-    font-size: 16px;
-        width: 75%;
-        padding: 15px;
+    .cardinfo{
+        margin-left: 25px;
     }
 }
 @media (max-width: 355px) {
@@ -397,9 +361,6 @@ footer .box3{
     .box3 button{
         margin-top: 0;
         padding: 5px;
-    }
-    .products{
-        margin-left: 5%;
     }
     header{
         flex-direction: column;
@@ -424,6 +385,9 @@ footer .box3{
     .copyright img{
         margin-left: 50px;
     }
+    .cardinfo{
+        margin-left: 10px;
+    }
 }
 @media(max-width: 334px) {
     footer img{
@@ -439,9 +403,8 @@ footer .box3{
     .contac-info, .copyright{
         padding:0;
     }
-    .persons{
-        margin-left: 5%;
-        margin-right: 5%;
+    .card{
+        width:225px;
     }
 }
 @media (max-width: 308px) {
@@ -450,6 +413,10 @@ footer .box3{
     }
     footer img{
         width:  25px;
+    }
+    .card{
+        width:200px;
+        font-size: 14px;
     }
 }
 @media(max-width: 288px) {
@@ -467,10 +434,10 @@ footer .box3{
     .copyright img{
         margin-left: 25px;
     }
-    #txtShow-2{
-        font-size: 14px;
-        width: 65%;
-        padding: 10px;
+    .card{
+        width:175px;
+        font-size: 12px;
+        height: 250px;
     }
 }
 @media (max-width: 255px) {
@@ -486,6 +453,9 @@ footer .box3{
     .copyright img{
         margin-left: 10px;
     }
+    .card{
+        width:150px;
+    }
 }
 @media (max-width: 229px) {
     footer .box1 h3{
@@ -496,6 +466,9 @@ footer .box3{
     }
     .copyright img{
         margin-left: 0;
+    }
+    .card{
+        width:70vw;
     }
 }
 @media (max-width: 207px) {
@@ -525,6 +498,9 @@ footer .box3{
     }
     header .logo{
         margin-left: 20px;
+    }
+    .card{
+        width:60vw;
     }
 }
 @media(max-width: 173px) {
