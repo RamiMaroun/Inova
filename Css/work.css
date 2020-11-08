@@ -28,9 +28,8 @@ a .active{
 .dropdown .drop-content {
     display: none;
     position: absolute;
-    right: 10px;
     background-color: white;
-    min-width: 75px;
+    width: 25vw;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     z-index: 1;
 }
@@ -55,11 +54,15 @@ a .active{
     color: #032a85;
 }
 .dropbtn{
-    font-size: 16px;
     padding: 10px 20px 10px 20px;
     background-color: #0ac89a;
     cursor: pointer;
     color: #f9f9f9;
+    font-size: 14px;
+    width: auto;
+    text-transform: uppercase;
+    border: #0ac89a solid 1px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 nav{
     margin-top: 40px;
@@ -81,13 +84,25 @@ nav a:hover{
 }
 .container{
     width: 90%;
-    min-height: calc(100vh - 100px - 270px);
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
     margin-left: 5%;
 }
 #show{
     display: flex;
     flex-direction: row;
+    height: auto;
+}
+.part2{
+    width: 60%;
+    line-height: 2;
+    font-size: 18px;
+    margin-left: 20px;
+    box-shadow: 1px 8px 15px 0px rgba(0,0,0,0.6);
+    padding: 30px;
+    margin-top: 75px;
+}
+.part1{
+    width: 30%;
 }
 .dropside{
     position: relative;
@@ -99,35 +114,23 @@ nav a:hover{
     display: none;
     position: absolute;
     background-color: white;
-    min-width: 150px;
+    width: 50vw;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     z-index: 1;
 }
 .dropside:hover .drop-content {
     display: block;
-    width: 150px;
 }
 .dropside:hover .dropbtn {
     background-color: #032a85;
     border: none;
 }
- .dropside .dropbtn{
-    font-size: 12px;
-     width: 120px;
-    background-color: #0ac89a;
-    cursor: pointer;
-     text-transform: uppercase;
-     color: #f9f9f9;
-     border: #0ac89a solid 1px;
-     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
- }
 #navside{
     display: flex;
     flex-direction: column;
-    width: 35%;
     margin-top: 50px;
     box-shadow: 5px 8px 16px 0 rgba(0,0,0,0.5);
-    height: 235px;
+    height: auto;
 }
 #navside .active{
     background-color:#0ac89a;
@@ -135,7 +138,7 @@ nav a:hover{
     border-bottom: none;
 }
 #navside a{
-    border-top: #032a85 0.5px solid;
+    border-bottom: #032a85 1px dotted;
     padding: 20px;
     color: #032a85;
     font-size: 14px;
@@ -152,11 +155,15 @@ nav a:hover{
     box-shadow: 1px 8px 15px 0px rgba(0,0,0,0.6);
     padding: 30px;
 }
+.video{
+    margin-left: 10%;
+    margin-right: auto;
+    margin-top: 75px;
+    height: auto;
+}
 iframe{
     width:70vw ;
     height:60vh;
-    margin-left: 140px;
-    margin-top: 75px;
 }
 .contactus{
     margin-top: 50px;
@@ -166,12 +173,17 @@ iframe{
 .contactus .txt-car{
     width: 75%;
     line-height: 2;
-    margin-left: 100px;
+    margin-bottom: 50px;
+    font-size: 20px;
+    box-shadow: 1px 8px 15px 0px rgba(0,0,0,0.6);
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .cardinfo{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    margin-left: 100px;
+    margin-left: auto;
 }
 .card img{
     width: 100%;
@@ -182,12 +194,14 @@ iframe{
 .card{
     width: 250px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
-    margin-bottom: 150px;
+    margin-bottom: 50px;
     text-align: center;
     height: 300px;
+    margin-left: auto;
+    margin-right: auto;
 }
 footer{
-    height: 250px;
+    height: auto;
     background-color: #032a85;
     display: flex;
     flex-direction: row;
@@ -195,44 +209,34 @@ footer{
     padding: 10px;
     color: white;
     text-transform: capitalize;
-    margin-top: 100px;
-    overflow: hidden;
 }
-footer .box1, footer .box2{
-    text-align: center;
+footer .box1{
     width: 50%;
-}
-footer img{
-    width:50px;
-    padding: 10px;
-}
-.contac-info{
-    display: flex;
-    flex-direction: row;
-    padding: 10px;
-    margin-left: 35%;
-}
-footer .copyright{
-    display: flex;
-    flex-direction: row;
-    margin-left: 20px;
-}
-footer .copyright p{
-    margin-top: 50px;
-    font-size: 20px;
-}
-footer .logo{
-    width: 100px;
-}
-footer .box2{
     display: flex;
     flex-direction: column;
+    text-align: center;
+}
+footer .box2{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.icons img{
+    width: 50px;
+    padding: 0 10px 0 10px;
+}
+.copyright img{
+    width: 100px;
+    padding-bottom: 10px;
+}
+.copyright p{
+    font-size: 20px;
 }
 footer  .links{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    text-align: left;
 }
 .links a{
     display: flex;
@@ -246,44 +250,12 @@ footer  .links{
     color: #0ac89a;
     text-decoration-line: underline;
 }
-@media (max-width: 1105px) {
-    #navside{
-        height: 233px;
-    }
-    iframe{
-        margin-left: 120px;
-    }
-}
 @media (max-width: 1050px) {
     .cardinfo{
         grid-template-columns: repeat(2,1fr);
     }
 }
-@media(max-width: 900px) {
-    footer .box1 h3{
-        text-align: left;
-        margin-left: 75px;
-    }
-    .contac-info{
-        margin-left: 20px;
-    }
-    #navside{
-        height: 250px;
-    }
-    iframe{
-        margin-left: 100px;
-    }
-}
 @media(max-width: 794px) {
-    footer img{
-        width:40px;
-    }
-    footer .copyright p{
-        margin-top: 35px;
-    }
-    footer .logo{
-        width: 75px;
-    }
     #navside{
         display: none;
     }
@@ -292,18 +264,22 @@ footer  .links{
     }
     .cardinfo{
         grid-template-columns: repeat(1,1fr);
-        margin-left: 200px;
+    }
+    .part2{
+        margin-left: 2px;
+        margin-right: 2px;
+        width: 70%;
     }
 }
 @media (max-width: 625px) {
-    #navside{
-        width: 30%;
+    #show{
+        flex-direction: column;
     }
-    iframe{
-        margin-left: 75px;
+    .part1{
+        width: 100%;
     }
-    .cardinfo{
-        margin-left: 150px;
+    .part2{
+        width: auto;
     }
 }
 @media (max-width: 550px) {
@@ -313,8 +289,18 @@ footer  .links{
     .dropdown{
         display: inline-block;
     }
-    .cardinfo{
-        margin-left: 100px;
+    footer{
+        flex-direction: column;
+        padding: 0;
+    }
+    footer .box2 , footer .box1{
+        width: 100%;
+    }
+    iframe{
+        height:40vh;
+    }
+    .txt-car p{
+        font-size: 20px;
     }
 }
 @media(max-width: 458px) {
@@ -324,44 +310,19 @@ footer  .links{
    #navside a{
        font-size: 10px;
    }
-    .dropside:hover .drop-content {
-        width: 150px;
-    }
-    footer img{
-        width: 30px;
-    }
-    footer .box1 h3{
-        margin-left: 50px;
-    }
-    .cardinfo{
-        margin-left: 50px;
+    .txt-car p{
+        font-size: 18px;
     }
 }
-@media(max-width: 386px) {
-    footer .box1 h3{
-        margin-left: 50px;
+@media(max-width:380px ) {
+    .dropside .drop-content{
+        width: 60vw;
     }
-    footer .resources{
-        width: 100px;
-        font-size: 14px;
-        padding: 10px;
-    }
-    .cardinfo{
-        margin-left: 25px;
+    .dropdown .drop-content{
+        width: 30vw;
     }
 }
 @media (max-width: 355px) {
-  footer{
-      display: flex;
-      flex-direction: column;
-  }
-    footer .box1 , footer .box3{
-        width: 100%;
-    }
-    .box3 button{
-        margin-top: 0;
-        padding: 5px;
-    }
     header{
         flex-direction: column;
     }
@@ -373,120 +334,83 @@ footer  .links{
         margin-left: 30%;
         width: 100px;
     }
-    .dropbtn{
-        padding: 5px 15px 5px 15px;
-    }
-    footer .box1 h3{
-        margin-left:100px;
-    }
-    .contac-info{
-        margin-left:75px;
-    }
-    .copyright img{
-        margin-left: 50px;
-    }
-    .cardinfo{
-        margin-left: 10px;
+    .part2{
+        font-size: 16px;
     }
 }
 @media(max-width: 334px) {
-    footer img{
-       width: 30px;
-    }
-    footer{
-       height:250px;
-    }
-    footer .resources{
-        margin-top: 0;
-        padding: 10px;
-    }
-    .contac-info, .copyright{
-        padding:0;
-    }
     .card{
         width:225px;
     }
+    .dropside .drop-content{
+        width: 65vw;
+    }
+    .dropdown .drop-content{
+        width: 35vw;
+    }
 }
 @media (max-width: 308px) {
-    .dropside:hover .drop-content {
-        width: 200px;
-    }
-    footer img{
-        width:  25px;
-    }
     .card{
         width:200px;
         font-size: 14px;
     }
-}
-@media(max-width: 288px) {
-    footer .box1 h3{
-        margin-left:75px;
+    footer .links{
+        flex-direction: column;
     }
-    .contac-info{
-        margin-left:50px;
+    .contact-info img{
+        width: 35px;
+        padding: 2px;
     }
     .copyright img{
-        margin-left: 25px;
+        width: 75px;
+    }
+    .copyright p{
+        font-size: 14px;
+    }
+    .box1 h3{
+        font-size: 15px;
+    }
+    .links a{
+        font-size: 12px;
+    }
+    .contact-info h3{
+        font-size: 15px;
+    }
+    iframe{
+        height:30vh;
+    }
+    .part2{
+        font-size: 14px;
+        padding: 10px;
     }
 }
 @media(max-width: 277px) {
-    .copyright img{
-        margin-left: 25px;
-    }
     .card{
         width:175px;
         font-size: 12px;
         height: 250px;
+    }
+    .txt-car p{
+        font-size: 15px;
     }
 }
 @media (max-width: 255px) {
     .drop-content a {
         font-size: 12px;
     }
-    footer .box1 h3{
-        margin-left:65px;
-    }
-    .contac-info{
-        margin-left:50px;
-    }
-    .copyright img{
-        margin-left: 10px;
-    }
     .card{
         width:150px;
     }
 }
 @media (max-width: 229px) {
-    footer .box1 h3{
-        margin-left:50px;
-    }
-    .contac-info{
-        margin-left:25px;
-    }
-    .copyright img{
-        margin-left: 0;
-    }
     .card{
         width:70vw;
     }
-}
-@media (max-width: 207px) {
-    footer .copyright{
-        margin-left: 5px;
+    .dropside .drop-content{
+        width: 75vw;
     }
-    footer .logo{
-        width: 65px;
-    }
-    footer .copyright p{
-        font-size: 14px;
-        margin-top: 35px;
-    }
-    footer .box1 h3{
-        margin-left:25px;
-    }
-    .contac-info{
-        margin-left:10px;
+    .dropdown .drop-content{
+        width: 40vw;
     }
 }
 @media (max-width: 200px) {
@@ -500,19 +424,27 @@ footer  .links{
         margin-left: 20px;
     }
     .card{
-        width:60vw;
+        width:65vw;
+        height: 150px;
     }
+    .card p{
+        font-size: 10px;
+    }
+    iframe{
+        height:20vh;
+    }
+    .part2{
+        font-size: 12px;
+        padding: 10px;
+    }
+    .txt-car p{
+        font-size: 12px;
+    }
+    .contactus .txt-car{
+        padding: 10px;
+    }
+
 }
-@media(max-width: 173px) {
-    footer .box1 h3{
-        font-size: 14px;
-    }
-    .contac-info{
-        margin-left:-2px;
-    }
-    .copyright img{
-        margin-left: -10px;
-    }
-}
+
 
 

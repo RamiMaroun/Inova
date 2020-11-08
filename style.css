@@ -23,7 +23,6 @@ header .logo{
 .dropdown .drop-content {
     display: none;
     position: absolute;
-    right: 10px;
     background-color: white;
     min-width: 75px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -44,17 +43,22 @@ header .logo{
 }
 .dropdown:hover .drop-content {
     display: block;
+    width: 40vw;
 }
 .dropdown:hover .dropbtn {
     background-color: white;
     color: #032a85;
 }
 .dropbtn{
-    font-size: 16px;
     padding: 10px 20px 10px 20px;
     background-color: #0ac89a;
     cursor: pointer;
     color: #f9f9f9;
+    font-size: 14px;
+    width: auto;
+    text-transform: uppercase;
+    border: #0ac89a solid 1px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 nav{
     margin-top: 40px;
@@ -82,52 +86,48 @@ nav a:hover{
 #show{
     display: flex;
     flex-direction: row;
-    overflow: hidden;
+    position: relative;
+    height:auto;
+}
+.part1{
+    width: 30%;
+}
+.part2{
+    width: 70%;
+    height: auto;
+    position: relative;
 }
 .dropside{
     position: relative;
     display: none;
     top: 30px;
     left: 25px;
+   margin-bottom: 50px;
 }
 .dropside .drop-content{
     display: none;
     position: absolute;
     background-color: white;
-    min-width: 150px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     z-index: 1;
 }
 .dropside:hover .drop-content {
     display: block;
-    width: 150px;
+    width: 70vw;
 }
 .dropside:hover .dropbtn {
     background-color: #032a85;
-    border: none;
 }
- .dropside .dropbtn{
-    font-size: 12px;
-     width: 120px;
-    background-color: #0ac89a;
-    cursor: pointer;
-     text-transform: uppercase;
-     color: #f9f9f9;
-     border: #0ac89a solid 1px;
-     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
- }
 #navside{
     display: flex;
     flex-direction: column;
-    width: 30%;
     margin-top: 150px;
     box-shadow: 5px 8px 16px 0 rgba(0,0,0,0.5);
-    height: 230px;
+    height: auto;
 }
 #navside .active{
     background-color:#0ac89a;
     color: white;
-    border-bottom: none;
 }
 #navside a{
     border-bottom: cornflowerblue solid 1px;
@@ -139,11 +139,7 @@ nav a:hover{
     background-color: #0ac89a;
     color: white;
 }
-.video-backgound{
-    position: relative;
-    width: 70%;
-}
-video {
+.part2 video {
     width: 100%;
     margin-top: 55px;
 }
@@ -153,37 +149,39 @@ video {
     top: 30%;
     left: 20px;
 }
-#txt h2{
-    font-size: 30px;
-}
-#txt h3{
-    position: absolute;
-    top:100px;
-    font-size: 20px;
-}
-.video-backgound a{
-    position: absolute;
-    color: white;
+
+.read-more{
     border: white 1px solid;
     border-radius: 10px;
-    padding: 20px 5px  20px 5px;
-    left: 40%;
-    bottom: 20%;
-    font-weight: bold;
+    padding: 10px 5px  10px 5px;
+    width: auto;
+}
+.part2 .read-more{
+    position: absolute;
+    left: 25vw;
+    right: auto;
+    bottom: 10vw;
+    top: auto;
+}
+.read-more a{
+    color: white;
     font-size: 14px;
     text-align: center;
 }
-.video-backgound a:hover{
-    background-color: white;
+.read-more:hover{
+    background-color: #f9f9f9;
+}
+.read-more:hover a{
     color: #032a85;
 }
 .products{
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    margin-left: 90px;
 }
 .products a{
     color: #032a85;
+    margin-right: auto;
+    margin-left: auto;
 }
 .card{
     max-width: 200px;
@@ -205,7 +203,7 @@ video {
     font-size: 20px;
 }
 footer{
-    height: 250px;
+    height: auto;
     background-color: #032a85;
     display: flex;
     flex-direction: row;
@@ -216,37 +214,40 @@ footer{
     margin-top: 100px;
     overflow: hidden;
 }
-footer .box1, footer .box2 ,footer .box3{
+footer .box1{
     text-align: center;
-    width: 50%;
+    width: 70%;
 }
-footer img{
-    width:50px;
-    padding: 10px;
+footer .box2{
+    text-align: center;
+    width: 30%;
 }
 .contac-info{
     display: flex;
     flex-direction: row;
     padding: 10px;
-    margin-left: 35%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.contac-info img{
+    width:50px;
+    padding: 10px;
 }
 footer .copyright{
-    display: flex;
-    flex-direction: row;
-    margin-left: 20px;
-}
-footer .copyright p{
-    margin-top: 50px;
-    font-size: 20px;
+    margin-right: auto;
+    margin-left: auto;
 }
 footer .logo{
-    width: 100px;
+    width: 75px;
+    padding-bottom: 10px;
 }
 footer .box2{
     display: flex;
     flex-direction: column;
+    margin-right: auto;
+    margin-left:auto;
 }
-footer  .links{
+footer .links{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -264,52 +265,24 @@ footer  .links{
     color: #0ac89a;
     text-decoration-line: underline;
 }
-footer .box3{
-    display: none;
-}
-.box3 button{
-    background-color: #0ac89a;
-    color: #f9f9f9;
-    padding: 15px;
-    font-size: 16px;
-}
-@media (max-width: 1179px) {
-    video {
-        margin-top: 75px;
-    }
-    #navside{
-        width: 30%;
-        margin-top: 50px;
-    }
-}
 @media(max-width: 1160px) {
-    .products{
-        grid-template-columns: repeat(3,1fr);
-    }
     #txt{
         top: 20%;
+    }
+    .products{
+        grid-template-columns: repeat(3,1fr);
     }
 }
 @media(max-width: 1005px) {
     #txt {
-      top: 5%;
+      top: 10px;
         color: #032a85;
     }
-    #txt h3{
-        top:100px;
-    }
-    video{
-        margin-top:200px;
-    }
-    .video-backgound a{
-        left: 35%;
-        bottom: 150px;
+    .vid{
+        margin-top:100px;
     }
 }
 @media(max-width: 900px) {
-   .products{
-       grid-template-columns: repeat(2,1fr);
-   }
     footer .box1 h3{
         text-align: left;
         margin-left: 75px;
@@ -317,60 +290,51 @@ footer .box3{
     .contac-info{
         margin-left: 20px;
     }
+    .products{
+        grid-template-columns: repeat(2,1fr);
+    }
 }
 @media(max-width: 794px) {
-    #txt h3{
-        top:125px;
-    }
-    video{
-        margin-top:250px;
-    }
-    .video-backgound a{
-        left: 30%;
-    }
-    footer .box2{
-        display: none;
-    }
-    footer .box3{
-        display: inline;
-    }
-    .box3 button{
-        margin-top: 100px;
-    }
-    footer img{
+    .contac-info img{
         width:40px;
     }
-    footer .copyright p{
-        margin-top: 35px;
+}
+@media(max-width: 690px) {
+    footer{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
     }
-    footer .logo{
-        width: 75px;
+    footer .box1{
+        width: 100%;
+        padding: 10px;
+        background-color: #0ac89a;
+    }
+    footer .box1 h3{
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .contac-info , .links{
+        margin-right: auto;
+        margin-left: auto;
+    }
+    footer .box2 {
+        width: 100%;
     }
 }
-@media (max-width: 650px) {
-    .products{
-        grid-template-columns: repeat(1,1fr);
-        margin-left: 30%;
-    }
-    video{
-        margin-top: 275px;
+@media (max-width: 655px) {
+    .vid{
+        margin-top: 135px;
     }
     .card{
         height: 325px;
     }
 }
-@media (max-width: 600px) {
-    .video-backgound a{
-       bottom: 50px;
-        color: #032a85;
-        border: #032a85 1px solid;
-        left: 20%;
-    }
-}
 @media (max-width: 550px) {
-nav{
+    nav{
     display: none;
-}
+    }
     #navside{
         display: none;
     }
@@ -381,126 +345,45 @@ nav{
         display: inline-block;
     }
     #txt{
-        width: 250px;
-        left: 50px;
-    }
-    #txt h2{
-        font-size: 20px;
-    }
-    #txt h3{
-        font-size: 15px;
-        top: 100px;
-        left: -100px;
+        width: 70vw;
+        align-items: center;
+
     }
     .products{
-        margin-left: 25%;
+        grid-template-columns: repeat(1,1fr);
     }
-    video{
-        width: 143%;
-        margin-top: 200px;
-        margin-left: -120px;
+    #show{
+        flex-direction: column;
     }
-    .video-backgound a{
-        border: solid white 1px;
-        color: #f9f9f9;
-        left: 50px;
-        bottom: 100px;
-        font-size: 12px;
+    .part2{
+        display: flex;
+        flex-direction: column;
+    }
+    .vid{
+        width: 86vw;
     }
 }
-@media(max-width: 501px) {
-    .video-backgound a{
-        left: 50px;
-    }
-}
-@media (max-width: 480px) {
-    .video-backgound a{
-        left: 10px;
-    }
-}
+
 @media(max-width: 458px) {
-    .video-backgound a{
-        font-size: 10px;
-        bottom: 100px;
-    }
-    #txt{
-        width: 200px;
-    }
-    #txt h2{
-        font-size: 16px;
-        margin-top: 75px;
-        margin-left: -150px;
-    }
-    #txt h3{
-        font-size: 12px;
-        left: -150px;
-        top:125px;
-    }
     #navside a{
         font-size: 12px;
     }
    #navside a{
        font-size: 10px;
    }
-    video{
-        width: 86vw;
-    }
-    .dropside:hover .drop-content {
-        width: 150px;
-    }
-    footer img{
-        width: 30px;
-    }
-    footer .box1 h3{
-        margin-left: 50px;
+    #txt h2{
+        font-size: 23px;
     }
 }
-@media (max-width: 408px) {
-    .products{
-        margin-left: 65px;
+@media(max-width: 388px) {
+    footer .box1{
+        font-size: 12px;
     }
-    #txt{
-        width: 150px;
-    }
-    .video-backgound a{
-        bottom: 80px;
-        left: -25px;
-    }
-}
-@media(max-width: 386px) {
-    footer .box1 h3{
-        margin-left: 50px;
-    }
-    footer .resources{
-        width: 100px;
-        font-size: 14px;
-        padding: 10px;
-    }
-    .video-backgound a{
-        bottom: 50px;
-        left: -30px;
-    }
-}
-@media (max-width: 372px) {
-    #txt{
-        width: 100px;
+    #txt h2{
+        font-size: 20px;
     }
 }
 @media (max-width: 355px) {
-  footer{
-      display: flex;
-      flex-direction: column;
-  }
-    footer .box1 , footer .box3{
-        width: 100%;
-    }
-    .box3 button{
-        margin-top: 0;
-        padding: 5px;
-    }
-    .products{
-        margin-left: 5%;
-    }
     header{
         flex-direction: column;
     }
@@ -512,45 +395,11 @@ nav{
         margin-left: 30%;
         width: 100px;
     }
-    .dropbtn{
-        padding: 5px 15px 5px 15px;
-    }
-    .video-backgound a{
-        left: -50px;
-    }
-    video{
-        width: 85vw;
-    }
-    footer .box1 h3{
-        margin-left:100px;
-    }
-    .contac-info{
-        margin-left:75px;
-    }
-    .copyright img{
-        margin-left: 50px;
+    #txt h2{
+        font-size: 18px;
     }
 }
 @media(max-width: 334px) {
-#show{
-    height: 400px;
-}
-    .video-backgound a{
-       bottom: 100px;
-    }
-    footer img{
-       width: 30px;
-    }
-    footer{
-       height:250px;
-    }
-    footer .resources{
-        margin-top: 0;
-        padding: 10px;
-    }
-    .contac-info, .copyright{
-        padding:0;
-    }
     .card{
         width: 150px;
         height: 150px;
@@ -564,126 +413,52 @@ nav{
     .card p{
         font-size: 12px;
     }
-    .products{
-        margin-left: 30px;
-    }
 }
-@media(max-width: 318px) {
-    #txt h3{
-        font-size: 10px;
+@media(max-width: 323px) {
+    footer .links{
+        flex-direction: column;
+        text-align: center;
     }
-    #txt h2{
-        font-size: 12px;
+    footer .box1{
+        font-size: 16px;
     }
 }
 @media (max-width: 308px) {
-#txt h3, #txt h2{
-    width: 200px;
-}
-    .video-backgound a{
-        left: -75px;
-        border: #032a85 1px solid;
-        color: #032a85;
-        bottom: 5px;
-        padding: 10px;
+    .contac-info img{
+        width:  35px;
     }
-    .dropside:hover .drop-content {
-        width: 200px;
+    #show{
+        overflow: hidden;
     }
-    footer img{
-        width:  25px;
+    #txt h2{
+        font-size: 16px;
     }
-}
-@media(max-width: 288px) {
-    footer .box1 h3{
-        margin-left:75px;
-    }
-    .contac-info{
-        margin-left:50px;
-    }
-    .copyright img{
-        margin-left: 25px;
-    }
-}
-@media(max-width: 277px) {
-    .copyright img{
-        margin-left: 25px;
+    #txt h4{
+        font-size: 12px;
     }
 }
 @media (max-width: 255px) {
-    #txt h3, #txt h2{
-        width: 150px;
-    }
-    .products{
-        margin-left: 15px ;
-    }
-    .video-backgound a{
-        left: -100px;
-    }
+
     .drop-content a {
         font-size: 12px;
     }
-    footer .box1 h3{
-        margin-left:65px;
-    }
-    .contac-info{
-        margin-left:50px;
-    }
-    .copyright img{
-        margin-left: 10px;
-    }
 }
 @media (max-width: 229px) {
-    .video-backgound a{
-    }
     .card{
         width: 130px;
-    }
-    footer .box1 h3{
-        margin-left:50px;
-    }
-    .contac-info{
-        margin-left:25px;
-    }
-    .copyright img{
-        margin-left: 0;
     }
 }
 @media (max-width: 207px) {
     .card{
         width: 120px;
     }
-    video{
-        width: 82vw;
-    }
-    footer .copyright{
-        margin-left: 5px;
-    }
-    footer .logo{
-        width: 65px;
-    }
-    footer .copyright p{
-        font-size: 14px;
-        margin-top: 35px;
-    }
-    footer .box1 h3{
-        margin-left:25px;
-    }
-    .contac-info{
-        margin-left:10px;
+    .contac-info img{
+        width: 25px;
     }
 }
 @media (max-width: 200px) {
-    #txt h3, #txt h2{
-        width: 125px;
-    }
     .card{
         width: 100px;
-    }
-    .video-backgound a{
-        left: -105px;
-        bottom: 25px;
-        padding: 4px;
     }
     .dropside{
         left: 10px;
@@ -694,36 +469,40 @@ nav{
     header .logo{
         margin-left: 20px;
     }
+    .dropside .drop-content  {
+        width: 60vw;
+    }
 }
 @media (max-width: 180px) {
-    #txt h3, #txt h2{
-        width: 110px;
-    }
-    #txt h3{
-        top: 140px;
-    }
-    .products{
-        margin-left: 10px;
-    }
+
     .card{
         width: 85px;
     }
-    video{
+    .video-bck1 video{
         margin-top: 225px;
     }
 }
 @media(max-width: 173px) {
-    footer .box1 h3{
-        font-size: 14px;
-    }
-    .contac-info{
-        margin-left:-2px;
+    .contac-info img{
+    width: 20px
     }
     .copyright img{
+        width: 50px;
+    }
+    footer .links{
+        font-size: 13px;
+    }
+    .dropside button{
         margin-left: -10px;
     }
-    .video-backgound a{
-        left:-120px ;
+    #txt{
+        width: 55vw;
+    }
+    #txt h2{
+        font-size: 12px;
+    }
+    #txt h4{
+        font-size: 10px;
     }
 
 }

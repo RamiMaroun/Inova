@@ -2,7 +2,7 @@ body{
     padding: 0;
     margin: 0;
     font-family: sans-serif;
-    height: 100vh;
+    height: 100%;
 }
 header{
     display: flex;
@@ -82,27 +82,57 @@ nav a:hover{
     border-radius: 10px;
     font-weight: bold;
 }
-.container{
+main{
     width: 90%;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
-    margin-left: 5%;
-}
-#show{
-    display: flex;
-    flex-direction: row;
-    height: auto;
-}
-.part2{
-    width: 60%;
-    line-height: 2;
-    font-size: 18px;
-    margin-left: 75px;
-    box-shadow: 1px 8px 15px 0px rgba(0,0,0,0.6);
-    padding: 30px;
-    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .part1{
     width: 30%;
+}
+.part2 h3{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: -30px;
+    margin-left: -20px;
+    z-index: 2;
+    background-color: #032a85;
+    color: #f9f9f9;
+}
+.part2 p {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+    padding: 25px;
+}
+.part2{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 50px 0 50px 0;
+}
+.pic {
+    width: 50%;
+}
+.txt{
+    width: 40%;
+    padding:100px 0 100px 0;
+}
+.pic img{
+    width: 25vw;
+    margin-right: 20px;
+}
+.pic a {
+    color: #0ac89a;
+}
+.pic a:hover{
+    color: #032a85;
+    transition: font-weight;
 }
 .dropside{
     position: relative;
@@ -114,9 +144,9 @@ nav a:hover{
     display: none;
     position: absolute;
     background-color: white;
+    width: 50vw;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     z-index: 1;
-    width: 50vw;
 }
 .dropside:hover .drop-content {
     display: block;
@@ -135,6 +165,7 @@ nav a:hover{
 #navside .active{
     background-color:#0ac89a;
     color: white;
+    border-bottom: none;
 }
 #navside a{
     border-bottom: #032a85 1px dotted;
@@ -146,55 +177,20 @@ nav a:hover{
     background-color: #0ac89a;
     color: white;
 }
-#txtShow-2{
-    display: none;
-    line-height: 2;
-    font-size: 18px;
-    box-shadow: 1px 8px 15px 0px rgba(0,0,0,0.6);
-    padding: 20px;
-    margin-top: 50px;
-    width: 86%;
-    margin-left: auto;
-    margin-right: auto;
-}
-.persons{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-}
-.card{
-    max-width: 225px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
-    text-align: center;
-    margin-bottom: 50px;
-    margin-top: 50px;
-    font-size: 12px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.card img{
-    width: 100%;
-}
-.card:hover{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 20px 20px 0 rgba(0, 0, 0, 0.6);
-}
-.card p{
-    font-size: 16px;
-    color: #a1a4a4;
-}
 footer{
     height: auto;
     background-color: #032a85;
     padding: 10px;
     color: white;
     text-transform: capitalize;
-    margin-top: 100px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-top: 75px;
 }
-.contact-info img{
-    width:40px;
-    padding: 10px;
+.icons img{
+    width: 40px;
+    padding: 20px;
 }
 .contact-info{
     text-align: center;
@@ -203,46 +199,46 @@ footer{
     width: 100px;
     padding-bottom: 12px;
 }
-.copyright p{
-    font-size: 20px;
-}
-@media (max-width: 1105px) {
-    .persons{
-        margin-left: 50px;
+@media(max-width: 1092px) {
+    .part1{
+        width: 40%;
+    }
+    .part2 h3{
+        width: 60%;
     }
 }
-@media(max-width: 900px) {
-    .persons{
-        margin-left: 75px;
-        margin-right: 50px;
-    }
+@media(max-width: 911px) {
+.part2 h3{
+   font-size: 15px;
+    padding: 7px;
+}
 }
 @media(max-width: 794px) {
-    .persons{
-        margin-left: 100px;
-    }
-}
-@media(max-width: 713px) {
     #navside{
         display: none;
     }
     .dropside{
         display: inline-block;
     }
-    .persons{
-        margin-left: 50px;
-        margin-right: 30px;
+    .part2 h3{
+        font-size: 12px;
+        padding: 5px;
+        width: 60%;
     }
 }
-@media (max-width: 625px) {
-    .persons{
-        grid-template-columns: repeat(1,1fr);
+@media (max-width: 650px) {
+    .part2{
+        flex-direction: column;
     }
-    #navside{
-        width: 30%;
+    .txt{
+        width: 100%;
+        padding: 5px 0 5px 0;
     }
-    .txtShow{
-        width: 70%;
+    .pic{
+        width: 100%;
+    }
+    .part2 h3{
+        font-size: 16px;
     }
 }
 @media (max-width: 550px) {
@@ -252,17 +248,7 @@ footer{
     .dropdown{
         display: inline-block;
     }
-    .persons{
-        margin-left: 20%;
-    }
-    .part2{
-        display: none;
-    }
-    #txtShow-2{
-        display: flex;
-    }
 }
-
 @media(max-width: 458px) {
     #navside a{
         font-size: 12px;
@@ -270,36 +256,28 @@ footer{
    #navside a{
        font-size: 10px;
    }
-    .persons{
-        margin-left: 15%;
-    }
-    .contact-info img{
-        width: 30px;
-    }
-    .copyright img{
-        width: 80px;
-    }
+   footer{
+       flex-direction: column;
+   }
+   .copyright{
+       text-align: center;
+   }
 }
-@media(max-width: 386px) {
-    .persons{
-        margin-left: 10%;
-    }
-    #txtShow-2{
-    font-size: 16px;
-        width: 75%;
-        padding: 15px;
-    }
+@media(max-width:380px ) {
     .dropside .drop-content{
         width: 60vw;
     }
     .dropdown .drop-content{
         width: 30vw;
     }
+    .part2{
+        font-size: 14px;
+    }
+    .part2 h3{
+        font-size: 14px;
+    }
 }
 @media (max-width: 355px) {
-    .products{
-        margin-left: 5%;
-    }
     header{
         flex-direction: column;
     }
@@ -311,31 +289,39 @@ footer{
         margin-left: 30%;
         width: 100px;
     }
-    footer{
-        flex-direction: column;
-    }
-    .copyright {
-        margin-right: auto;
-        margin-left: auto;
-    }
 }
-@media (max-width: 313px) {
+@media(max-width: 334px) {
     .dropside .drop-content{
-        width: 70vw;
+        width: 65vw;
     }
     .dropdown .drop-content{
         width: 35vw;
     }
-}
-@media(max-width: 277px) {
-    #txtShow-2{
-        font-size: 14px;
-        width: 65%;
+    .part2 h3{
+        width: 80%;
+        margin-left: 10px;
+    }
+    .icons img{
+        width: 30px;
         padding: 10px;
     }
 }
 @media (max-width: 255px) {
     .drop-content a {
+        font-size: 12px;
+    }
+}
+@media (max-width: 229px) {
+    .dropside .drop-content{
+        width: 75vw;
+    }
+    .dropdown .drop-content{
+        width: 40vw;
+    }
+    .part2{
+        font-size: 12px;
+    }
+    .part2 h3{
         font-size: 12px;
     }
 }
@@ -349,19 +335,24 @@ footer{
     header .logo{
         margin-left: 20px;
     }
-    .contact-info img{
-        width: 20px;
-        padding:2px;
+    .part2{
+        font-size: 10px;
+    }
+    .part2 h3{
+        font-size: 10px;
+    }
+    .icons img{
+        width: 25px;
+        padding: 2px;
     }
     .copyright img{
-        width: 60px;
+        width: 65px;
     }
     .copyright p{
         font-size: 14px;
     }
-    .contact-info h3{
-        font-size: 14px;
-    }
+
 }
+
 
 
